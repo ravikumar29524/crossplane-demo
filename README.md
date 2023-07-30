@@ -1,2 +1,2 @@
 # crossplane-demo
-Crossplane provider demo
+Crossplane provider demo - contains YAML manifests
