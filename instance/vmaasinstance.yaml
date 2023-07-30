@@ -17,6 +17,9 @@ spec:
       - name: "root_vol"
         size: 5
         datastoreId: "24"
+      - name: "secondary_vol1"
+        size: 8
+        datastoreId: "24"
     config:
       - resourcePoolId: 54
         folderCode: "group-v220"
