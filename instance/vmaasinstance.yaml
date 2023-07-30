@@ -1,1 +1,28 @@
----
+apiVersion: vmaasinstance.hpegl.upbound.io/v1alpha1
+kind: Instance
+metadata:
+  name: centos-crossplane
+spec:
+  forProvider:
+    name: "centos-crossplane"
+    cloudId : 3
+    groupId: 6170
+    layoutId: 339
+    planId: 1221
+    instanceTypeCode : "vmware"
+    power: "poweron"
+    network:
+      - id: 267
+    volume:
+      - name: "root_vol"
+        size: 5
+        datastoreId: "24"
+    config:
+      - resourcePoolId: 54
+        folderCode: "group-v220"
+        templateId: 1725
+        noAgent: true
+    tags:
+      source: "argocd"
+  providerConfigRef:
+    name: default
